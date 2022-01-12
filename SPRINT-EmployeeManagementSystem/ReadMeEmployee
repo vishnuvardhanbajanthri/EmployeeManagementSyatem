@@ -1,0 +1,39 @@
+POST
+http://localhost:8888/employee/create
+{
+    "userId":"10",
+    "DOB": "1999-05-15",
+    "Email": "kiran@gmail.com",
+    "FirstName": "kiran",
+    "LastName": "kumar"
+}
+{
+    "userId":"20",
+    "DOB": "1997-05-20",
+    "Email": "ramu@gmail.com",
+    "FirstName": "ramu",
+    "LastName": "sai"
+}
+{
+    "userId":"25",
+    "DOB": "2001-07-25",
+    "Email": "varun@gmail.com",
+    "FirstName": "varun",
+    "LastName": "kumar"
+}
+
+O/P : true
+COUNT
+http://localhost:8888/employee/count
+3
+UPDATE
+http://localhost:8888/employee/update
+{
+    "userId":"10",
+    "DOB": "1997-06-04",
+    "Email": "naresh@gmail.com",
+    "FirstName": "naresh",
+    "LastName": "kumar"
+}
+
+O/P: Employee updated successfully

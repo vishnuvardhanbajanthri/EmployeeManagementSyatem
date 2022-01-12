@@ -1,0 +1,47 @@
+ADD:
+http://localhost:8888/StatusReport/add
+{
+    "statusId":"10",
+    "comments":"How much time will it take to get resloved",
+    "details":"MYSQL connector",
+    "createDate":"2022-01-10",
+    "userId":"1",
+    "complianceId":"1",
+    "statusreport":"open"
+}
+
+O/p=true 
+
+UPDATE:
+http://localhost:8888/StatusReport/updateStatus
+
+{
+    "statusId":"10",
+    "comments":"The issue is resloved",
+    "details":"MYSQL connector",
+    "createDate":"2022-01-11",
+    "userId":"1",
+    "complianceId":"1",
+    "statusreport":"closed"
+}
+
+O/P Status updated successfully
+
+
+GET: Counting Status Reports
+http://localhost:8888/StatusReport/count
+OUTPUT:
+1
+
+Get all:
+http://localhost:8888/StatusReport/getAll
+[
+    {
+        "statusId": 10,
+        "comments": "The issue is resloved",
+        "details": "MYSQL connector",
+        "createDate": "2022-01-11",
+        "statusreport": "closed"
+    }
+]
+

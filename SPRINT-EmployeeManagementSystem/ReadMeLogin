@@ -1,0 +1,48 @@
+ADD:
+http://localhost:8888/users
+  {
+        "role": "Tester",
+        "UserId": 22,
+        "Password": "capgi",
+        "Role": "senioranalyst"
+    },
+    {
+        "role": "JavaDeveloper",
+        "UserId": 25,
+        "Password": "capgi",
+        "Role": "analyst"
+    }
+
+UPDATE:
+http://localhost:8888/users/20
+
+{
+        "role": "Tester",
+        "UserId": 20,
+        "Password": "capgi",
+        "Role": "senioranalyst"
+    },
+
+GETALL:
+http://localhost:8888/users
+OUTPUT:
+[
+    {
+        "role": "Tester",
+        "UserId": 20,
+        "Password": "capgi",
+        "Role": "senioranalyst"
+    },
+    {
+        "role": "JavaDeveloper",
+        "UserId": 25,
+        "Password": "capgi",
+        "Role": "analyst"
+    }
+]
+
+DELETE:
+http://localhost:8888/users/20
+
+OUTPUT:
+User Deleted Successfully

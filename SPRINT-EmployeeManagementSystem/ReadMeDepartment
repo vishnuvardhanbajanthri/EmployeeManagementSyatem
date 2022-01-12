@@ -1,0 +1,64 @@
+MySQL
+Db Records :
+ create database capgaws;
+ use capgaws;
+ 
+ insert into department values(1,'juniortester');
+ insert into department values(2,'seniortester');
+ insert into department values(5,'developer');
+ insert into department values(7,'testing');
+ 
+commit;
+
+>>Get :All records 
+http://localhost:8888/department/getAll
+[
+    {
+        "departId": 1,
+        "dName": "juniortester"
+    },
+    {
+        "departId": 2,
+        "dName": "seniortester"
+    },
+    {
+        "departId": 5,
+        "dName": "developer"
+    },
+    {
+        "departId": 7,
+        "dName": "testing"
+    }
+]
+   
+
+>>Delete: deleting record by id 
+http://localhost:8888/department/department/{id}
+
+>>Post:add new record
+http://localhost:8888/department/add
+
+Select Body : and raw
+{
+    "departId": 15,
+    "dName": "Developer"
+   
+}
+>>Put : Update Record 
+http://localhost:8888/department/departmentUpdate
+Select Body : and raw
+{
+    "departId": 12,
+    "dName": "testing"
+ }
+ 
+>>Get:count of records
+http://localhost:8888/department/count   
+
+
+>>Get:record by Id
+http://localhost:8888/department/department/10
+{
+    "departId": 10,
+    "dName": "developertester"
+}

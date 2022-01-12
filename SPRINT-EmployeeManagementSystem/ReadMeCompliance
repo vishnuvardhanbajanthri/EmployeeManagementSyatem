@@ -1,0 +1,78 @@
+MySQL
+Db Records :
+ create database capgapp;
+ use capgapp;
+ 
+ insert into compliance values(10,"2022-01-03","Data Base Problem","Software","Open");
+ insert into compliance values(30,"2022-01-10","Camera","Hardware","Open");
+ insert into compliance values(20,"2022-01-06","Spring tool","Software","Open");
+ 
+ 
+ commit;
+ 
+ GetAll :
+http://localhost:8888/compliances
+[
+     {
+        "complianceId": 10,
+        "IType": "Software",
+        "Details": "Data Base Problem",
+        "CreateDate": "2022-01-03",
+        "Status": "Open"
+    },
+    {
+        "complianceId": 20,
+        "IType": "Software",
+        "Details": "Spring tool",
+        "CreateDate": "2022-01-06",
+        "Status": "Open"
+    },
+    {
+        "complianceId": 30,
+        "IType": "Hardware",
+        "Details": "Camera",
+        "CreateDate": "2022-01-10",
+        "Status": "Open"
+    }
+]
+
+ Search ID :
+ Get :
+ http://localhost:8888/compliances/10
+ {
+    "complianceId": 10,
+    "itype": "Software",
+    "details": "Data Base Problem",
+    "createdate": "2022-01-03",
+    "status": "Open",
+    "department": null
+}
+ 
+ Put : Update Record 
+http://localhost:8888/updateCompliance
+ {
+        "complianceId":"10",
+        "IType": "Software",
+        "Details": "maven ",
+        "CreateDate": "2022-01-10",
+        "Status": "process"
+    }
+   
+   Output: compliance updated successfully
+
+ Post : Add records 
+http://localhost:8888/compliances
+{
+        "complianceId":"40",
+        "IType": "Software",
+        "Details": "Swagger ",
+        "CreateDate": "2022-01-05",
+        "Status": "Open"
+    }
+    
+    Output:Compliance Added Successfully
+    
+ Delete : Delete Records
+http://localhost:8888/delete/3
+
+Output : Compliance Deleted Successfully
